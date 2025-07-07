@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iSell.lk | Apple Reseller Sri Lanka</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="hero"></div>
+  <div id="categories"></div>
+  <div id="featured-products"></div>
+  <div id="tradein"></div>
+  <div id="testimonials"></div>
+  <div id="contact"></div>
+  <div id="footer"></div>
+
+  <script>
+    const loadSection = (id, file) => {
+      fetch(file).then(res => res.text()).then(html => {
+        document.getElementById(id).innerHTML = html;
+      });
+    };
+
+    loadSection('header', 'sections/header.html');
+    loadSection('hero', 'sections/hero.html');
+    loadSection('categories', 'sections/categories.html');
+    loadSection('featured-products', 'sections/featured-products.html');
+    loadSection('tradein', 'sections/tradein.html');
+    loadSection('testimonials', 'sections/testimonials.html');
+    loadSection('contact', 'sections/contact.html');
+    loadSection('footer', 'sections/footer.html');
+  </script>
+</body>
+</html>
