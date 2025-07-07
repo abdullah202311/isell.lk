@@ -2,35 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>iSell.lk | Apple Reseller Sri Lanka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iSell.lk | Authentic Apple Devices in Sri Lanka</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <div id="header"></div>
-  <div id="hero"></div>
-  <div id="categories"></div>
-  <div id="featured-products"></div>
-  <div id="tradein"></div>
-  <div id="testimonials"></div>
-  <div id="contact"></div>
-  <div id="footer"></div>
 
-  <script>
-    const loadSection = (id, file) => {
-      fetch(file).then(res => res.text()).then(html => {
-        document.getElementById(id).innerHTML = html;
-      });
-    };
+  <!-- Header -->
+  <header>
+    <h1>iSell.lk</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#categories">Shop</a>
+      <a href="#tradein">Trade-In</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    loadSection('header', 'sections/header.html');
-    loadSection('hero', 'sections/hero.html');
-    loadSection('categories', 'sections/categories.html');
-    loadSection('featured-products', 'sections/featured-products.html');
-    loadSection('tradein', 'sections/tradein.html');
-    loadSection('testimonials', 'sections/testimonials.html');
-    loadSection('contact', 'sections/contact.html');
-    loadSection('footer', 'sections/footer.html');
-  </script>
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    Authentic Apple Devices in Sri Lanka
+  </section>
+
+  <!-- Categories -->
+  <section id="categories">
+    <h2>Shop by Category</h2>
+    <div class="grid">
+      <div>
+        <img src="assets/images/iphone.jpg" alt="iPhones" />
+        <h3>iPhones</h3>
+      </div>
+      <div>
+        <img src="assets/images/mac.jpg" alt="Mac & iPads" />
+        <h3>Mac & iPads</h3>
+      </div>
+      <div>
+        <img src="assets/images/watch.jpg" alt="Watches" />
+        <h3>Watches</h3>
+      </div>
+      <div>
+        <img src="assets/images/accessories.jpg" alt="Accessories" />
+        <h3>Accessories</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section id="featured-products">
+    <h2>Best Sellers</h2>
+    <div class="grid">
+      <div>
+        <img src="assets/images/iphone15.jpg" alt="iPhone 15 Pro" />
+        <h3>iPhone 15 Pro</h3>
+        <p>Rs. 355,000</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+      <div>
+        <img src="assets/images/macbook.jpg" alt="MacBook Air M2" />
+        <h3>MacBook Air M2</h3>
+        <p>Rs. 485,000</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trade-In -->
+  <section id="tradein">
+    <h2>Trade-In & Upgrade</h2>
+    <p>Exchange your used Apple device for instant credit toward a new one.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Device Model" required />
+      <button type="submit">Submit Trade-In</button>
+    </form>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="grid">
+      <div>
+        <p>"Great service and genuine Apple products!"</p>
+        <strong>- Nimal Perera</strong>
+      </div>
+      <div>
+        <p>"I upgraded my iPhone here and saved a lot."</p>
+        <strong>- Ayesha Fernando</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 iSell.lk — All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
